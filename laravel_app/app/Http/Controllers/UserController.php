@@ -130,6 +130,14 @@ class UserController extends Controller
 
         return redirect()->back()->with('error', 'Failed to upload image.');
     }
+    public function change_name(Request $request, string $id)
+    {
+        $user = User::findOrFail($id);
+        $user->name = $request->name;
+        $user->save();
+
+        return response()->json('nomainits');
+    }
     public function api_change_profile_picture(Request $request, string $id)
     {
         // $user = User::findOrFail($id);

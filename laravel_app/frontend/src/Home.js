@@ -306,138 +306,145 @@ const Home = ( { token } ) => {
   return (
     <div>
       <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '16px' }}>
-        <div style={{ flex: '1', marginLeft: '16px' }}>
-          {(token &&
-          <Upload
-            accept="image/*"
-            showUploadList={false}
-            beforeUpload={handleImageUpload}
-          >
-            <Button icon={<UploadOutlined />} style={{ marginBottom: '16px' }}>
-              Augšupielādēt attēlu
-            </Button>
-          </Upload>
-          )}
-          
-          {(token && userImages.length > 0 && <>
-          <h1>Jusu bildes</h1>
-          <Row gutter={[50, 50]}>
-            {userImages.map((image) => (
-              <Col key={image.id} xs={12} sm={8} md={6} lg={4} xl={4} xxl={4}>
-                <Card
-                  hoverable
+        <div className='main-container'>
+          <div className='upload-images-container'>
+            {(token &&
+            <Upload
+              accept="image/*"
+              showUploadList={false}
+              beforeUpload={handleImageUpload}
+            >
+              <Button icon={<UploadOutlined />} style={{ marginBottom: '16px' }}>
+                Augšupielādēt attēlu
+              </Button>
+            </Upload>
+            )}
+          </div>
+          <div className='user-images-container'>
+            {(token && userImages.length > 0 && <>
+            <h1>Jusu bildes</h1>
+            <Row gutter={[50, 50]}>
+              {userImages.map((image) => (
+                <Col key={image.id} xs={12} sm={8} md={6} lg={4} xl={4} xxl={4}>
+                  <Card
+                    hoverable
+                    cover={
+                      <div className='square-image'>
+                      <img alt={image.apraksts} src={image.url} style={{ borderRadius: '8px' }} onClick={() => handleView(image, image.id)} />
+                      </div>
+                      }
+                    actions={[
+                      <Space>
+                        <Button icon={<DeleteOutlined />} onClick={() => handleDelete(image.id)} type="text" danger />
+                        <Button icon={<LikeOutlined />} type="text"> {image.likes}</Button>
+                      </Space>
+                    ]}
+                  >
+                    <Card.Meta
+                      title={image.apraksts}
+                    />
+                  </Card>
+                </Col>
+              ))}
+            </Row>
+            </>
+            )}
+          </div>
+          <div className='galery-container'>
+            <div className='header-container'>
+              {(token && <><h1>Citu lietotaju bildes</h1></>)}
+              {(!token && <><h1>Galerija</h1></>)}
+              <Button
+                className='kartot_poga'
+                onClick={handleSortBy}
+                type="text"
+
+              >
+                {sortBy === 'views' ? <EyeOutlined /> : <CalendarOutlined />}
+                {sortBy === 'views' ? 'Kārtot pēc popularitātes' : 'Kārtot ielikšanas secībā'}
+              </Button>
+            </div>
+            <Row gutter={[50, 50]} style={{ marginRight: '20px' }}>
+              {galleryImages
+              .sort((imageA, imageB) => {
+                if (sortBy === 'views') {
+                  return imageB.views - imageA.views;
+                } else if (sortBy === 'date') {
+                  return imageA.id - imageB.id;
+                }
+                return 0;
+              })
+              .map((image, index) => (
+                (!token || (auth_user && image.user.name !== auth_user.name)) && 
+                <>
+                {(index + 1) % 3 === 0 &&
+                <Col key={index + 1000} xs={12} sm={8} md={6} lg={4} xl={4} xxl={4}>                
+                  {token ? ( 
+                  <Card hoverable
+                    cover={
+                      <div className='square-image'>
+                        <img alt="bariba" src={bariba} onClick={() => window.location.href = "https://www.purina.lv/raksti/kaki/barosana-un-uzturs"} />
+                      </div>
+                      }>
+                    <Card.Meta
+                      avatar={<Avatar src={latvija} />}
+                      description={`reklama`}
+                    />
+                  </Card>
+                  
+                  ) : (
+                  <Card hoverable
                   cover={
                     <div className='square-image'>
-                    <img alt={image.apraksts} src={image.url} style={{ borderRadius: '8px' }} onClick={() => handleView(image, image.id)} />
+                      <img alt="reklama" src={reklama} onClick={() => window.location.href = "http://www.dzd.lv/looking-for-home/en/"} />
+                    </div>
+                  }>
+                    <Card.Meta
+                      avatar={<Avatar src={latvija} />}
+                      description={"reklama"}
+                    />
+                </Card>
+                  )}
+                </Col> }
+                <Col key={image.id} xs={12} sm={8} md={6} lg={4} xl={4} xxl={4}>                
+                  <Card hoverable
+                    cover={
+                      <div className='square-image'>
+                        <img alt={image.apraksts} src={image.url} onClick={() => handleView(image)} />
                     </div>
                     }
-                  actions={[
-                    <Space>
-                      <Button icon={<DeleteOutlined />} onClick={() => handleDelete(image.id)} type="text" danger />
-                      <Button icon={<LikeOutlined />} type="text"> {image.likes}</Button>
-                    </Space>
-                    
-                  ]}
-                >
-                  <Card.Meta
-                    title={image.apraksts}
-                  />
-                </Card>
-              </Col>
-            ))}
-          </Row>
-          </>)}
-          {(token && <><h1>Citu lietotaju bildes</h1></>)}
-          {(!token && <><h1>Galerija</h1></>)}
-          <Button
-            className='kartot_poga'
-            onClick={handleSortBy}
-            type="text"
-
-          >
-            {sortBy === 'views' ? <EyeOutlined /> : <CalendarOutlined />}
-            {sortBy === 'views' ? 'Kārtot pēc skatījumiem' : 'Kārtot pēc datuma'}
-          </Button>
-          <Row gutter={[50, 50]} style={{ marginRight: '20px' }}>
-            {galleryImages
-            .sort((imageA, imageB) => {
-              if (sortBy === 'views') {
-                return imageB.views - imageA.views;
-              } else if (sortBy === 'date') {
-                return imageB.id - imageA.id;
-              }
-              return 0;
-            })
-            .map((image, index) => (
-              (!token || (auth_user && image.user.name !== auth_user.name)) && 
-              <>
-              {(index + 1) % 3 === 0 &&
-              <Col key={index + 1000} xs={12} sm={8} md={6} lg={4} xl={4} xxl={4}>                
-                {token ? ( 
-                <Card hoverable
-                  cover={
-                    <div className='square-image'>
-                      <img alt="bariba" src={bariba} onClick={() => window.location.href = "https://www.purina.lv/raksti/kaki/barosana-un-uzturs"} />
-                    </div>
-                    }>
-                  <Card.Meta
-                    avatar={<Avatar src={latvija} />}
-                    description={`reklama`}
-                  />
-                </Card>
-                
-                ) : (
-                <Card hoverable
-                cover={
-                  <div className='square-image'>
-                    <img alt="reklama" src={reklama} onClick={() => window.location.href = "http://www.dzd.lv/looking-for-home/en/"} />
-                  </div>
-                }>
-                  <Card.Meta
-                    avatar={<Avatar src={latvija} />}
-                    description={"reklama"}
-                  />
-              </Card>
-                )}
-              </Col> }
-              <Col key={image.id} xs={12} sm={8} md={6} lg={4} xl={4} xxl={4}>                
-                <Card hoverable
-                  cover={
-                    <div className='square-image'>
-                      <img alt={image.apraksts} src={image.url} onClick={() => handleView(image)} />
-                  </div>
-                  }
-                  actions={[
-                    token ? (
-                      <Space>
-                        <Button icon={<LikeOutlined />} onClick={() => handleLike(image.id)} type="text"> {image.likes} </Button>
-                        <Button icon={<DislikeOutlined />} onClick={() => handleDislike(image.id)} type="text" />
-                        {auth_user.role === 'admin' &&
-                        <Button icon={<DeleteOutlined />} onClick={() => handleDelete(image.id)} type="text" danger />
-                        }
-                        <Button className='skatijumi' icon={<EyeOutlined />} type="text"> {image.views} </Button>
-                        </Space>
-                    ) : null
-                  ]}
-                >
-                  {image.author_profile_picture_path !== 'none'  ? (
-                  <Card.Meta
-                  avatar={<Avatar src={'http://localhost:2000/storage/images/' + image.author_profile_picture_path} />}
-                  title={image.apraksts}
-                  description={`Autors: ${image.author_name}`}
-                  />
-                  ) : (
-                  <Card.Meta
-                    avatar={<Avatar/>}
+                    actions={[
+                      token ? (
+                        <Space>
+                          <Button icon={<LikeOutlined />} onClick={() => handleLike(image.id)} type="text"> {image.likes} </Button>
+                          <Button icon={<DislikeOutlined />} onClick={() => handleDislike(image.id)} type="text" />
+                          {auth_user.role === 'admin' &&
+                          <Button icon={<DeleteOutlined />} onClick={() => handleDelete(image.id)} type="text" danger />
+                          }
+                          <Button className='skatijumi' icon={<EyeOutlined />} type="text"> {image.views} </Button>
+                          </Space>
+                      ) : null
+                    ]}
+                  >
+                    {image.author_profile_picture_path !== 'none'  ? (
+                    <Card.Meta
+                    avatar={<Avatar src={'http://localhost:2000/storage/images/' + image.author_profile_picture_path} />}
                     title={image.apraksts}
                     description={`Autors: ${image.author_name}`}
-                  />
-                )}
-                </Card>
-              </Col>
-              </>
-            ))}
-          </Row>
+                    />
+                    ) : (
+                    <Card.Meta
+                      avatar={<Avatar/>}
+                      title={image.apraksts}
+                      description={`Autors: ${image.author_name}`}
+                    />
+                  )}
+                  </Card>
+                </Col>
+                </>
+              ))}
+            </Row>
+          </div>
         </div>
         {(token &&
         <div style={{ maxWidth: '300px' }}>

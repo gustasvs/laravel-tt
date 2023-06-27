@@ -1,18 +1,22 @@
 import React, { useState } from 'react';
 import { Modal, Input, Button } from 'antd';
 import axios from 'axios';
+import save_log from './logService';
 
 const ImagePopup = ({ image, onClose, onSave, token }) => {
   const [description, setDescription] = useState(image.apraksts);
 
   const handleSave = () => {
+    const imgDesc = image.apraksts;
     axios.put(`http://localhost:2000/api/images/${image.id}/update_desc`, { description }, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
     })
     .then((response) => {
+      
       console.log('desc uploaded successfully:', response.data);
+      save_log('Nomainīts bildes ar id ' + image.id +' apraksts', token);
     })
     .catch((error) => {
       console.error('Failed to upload desc:', error);
@@ -35,7 +39,7 @@ const ImagePopup = ({ image, onClose, onSave, token }) => {
         </div>
         <div style={{ marginTop: '16px' }}>
           <Button type="primary" onClick={handleSave}>
-            Save
+            Saglabāt
           </Button>
         </div>
       </div>

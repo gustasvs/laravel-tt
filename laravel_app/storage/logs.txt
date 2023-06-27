@@ -136,3 +136,211 @@
 {"timestamp":"2023-06-27T12:01:47.761526Z","error":"Image with idundefined viewed!","user":"admin"}
 {"timestamp":"2023-06-27T12:05:02.318470Z","error":"Image with idundefined viewed!","user":"admin"}
 {"timestamp":"2023-06-27T12:09:15.018666Z","error":"Image with idundefined viewed!","user":"admin"}
+{"timestamp":"2023-06-27T12:13:28.107594Z","error":"Lietotajs izgajis no sistemas!","user":"admin"}
+{"timestamp":"2023-06-27T12:13:33.865446Z","error":"Ienacis jauns lietotajs! Epasts: tester@example.com, vards: tester, loma: user!","user":"tester"}
+{"timestamp":"2023-06-27T12:21:54.792351Z","error":"Ielikta jauna bilde!","user":"tester"}
+{"timestamp":"2023-06-27T12:21:59.442194Z","error":"Lietotajs izgajis no sistemas!","user":"tester"}
+{"timestamp":"2023-06-27T12:22:02.999952Z","error":"Ienacis jauns lietotajs! Epasts: admin@example.com, vards: admin, loma: admin!","user":"admin"}
+{"timestamp":"2023-06-27T12:45:10.119854Z","error":"Nolaikota bilde ar id 17","user":"admin"}
+{"timestamp":"2023-06-27T12:45:11.398177Z","error":"Nolaikota bilde ar id 17","user":"admin"}
+{"timestamp":"2023-06-27T12:45:11.901337Z","error":"Dislaikota bilde ar id 17","user":"admin"}
+{"timestamp":"2023-06-27T12:45:12.780375Z","error":"Nolaikota bilde ar id 17","user":"admin"}
+{"timestamp":"2023-06-27T12:45:13.554828Z","error":"Dislaikota bilde ar id 17","user":"admin"}
+{"timestamp":"2023-06-27T12:45:14.275520Z","error":"Nolaikota bilde ar id 17","user":"admin"}
+{"timestamp":"2023-06-27T12:50:50.408156Z","error":"Dislaikota bilde ar id 18","user":"admin"}
+{"timestamp":"2023-06-27T12:50:51.256187Z","error":"Nolaikota bilde ar id 18","user":"admin"}
+{"timestamp":"2023-06-27T12:53:04.368988Z","error":"Image with id5 viewed!","user":"admin"}
+{"timestamp":"2023-06-27T12:55:47.991547Z","error":"Image with id1 viewed!","user":"admin"}
+{"timestamp":"2023-06-27T12:56:22.514471Z","error":"Image with id1 viewed!","user":"admin"}
+{"timestamp":"2023-06-27T12:57:23.759496Z","error":"Image with id1 viewed!","user":"admin"}
+{"timestamp":"2023-06-27T12:57:47.638111Z","error":"Image with id1 viewed!","user":"admin"}
+{"timestamp":"2023-06-27T12:57:53.208228Z","error":"Image with idundefined viewed!","user":"admin"}
+{"timestamp":"2023-06-27T12:57:58.554778Z","error":"Image with idundefined viewed!","user":"admin"}
+{"timestamp":"2023-06-27T12:59:00.979953Z","error":"Image with idundefined viewed!","user":"admin"}
+{"timestamp":"2023-06-27T12:59:18.083985Z","error":"Image with id5 viewed!","user":"admin"}
+{"timestamp":"2023-06-27T12:59:20.434920Z","error":"Nomain\u012bts bildes ar id 5 apraksts","user":"admin"}
+{"timestamp":"2023-06-27T12:59:40.139310Z","error":"Image with id5 viewed!","user":"admin"}
+{"timestamp":"2023-06-27T12:59:43.741751Z","error":"Nomain\u012bts bildes ar id 5 apraksts","user":"admin"}
+{"timestamp":"2023-06-27T13:00:21.170545Z","error":"Image with id1 viewed!","user":"admin"}
+{"timestamp":"2023-06-27T13:00:23.540526Z","error":"Nomain\u012bts bildes ar id 1 apraksts","user":"admin"}
+{"timestamp":"2023-06-27T13:00:41.410496Z","error":"Image with id1 viewed!","user":"admin"}
+{"timestamp":"2023-06-27T13:00:43.712953Z","error":"Nomain\u012bts bildes ar id 1 apraksts","user":"admin"}
+{"timestamp":"2023-06-27T13:01:09.934746Z","error":"Image with idundefined viewed!","user":"admin"}
+{"timestamp":"2023-06-27T13:01:17.473244Z","error":"Nomain\u012bts bildes ar id 10 apraksts","user":"admin"}
+{"timestamp":"2023-06-27T13:01:18.191273Z","error":"Image with idundefined viewed!","user":"admin"}
+{"timestamp":"2023-06-27T13:01:24.230981Z","error":"Nomain\u012bts bildes ar id 17 apraksts","user":"admin"}
+{"timestamp":"2023-06-27T13:01:25.875960Z","error":"Image with idundefined viewed!","user":"admin"}
+{"timestamp":"2023-06-27T13:01:30.945402Z","error":"Nomain\u012bts bildes ar id 18 apraksts","user":"admin"}
+{"timestamp":"2023-06-27T13:01:32.237510Z","error":"Image with idundefined viewed!","user":"admin"}
+{"timestamp":"2023-06-27T13:01:38.281811Z","error":"Nomain\u012bts bildes ar id 19 apraksts","user":"admin"}
+{"timestamp":"2023-06-27T13:01:39.811482Z","error":"Image with idundefined viewed!","user":"admin"}
+{"timestamp":"2023-06-27T13:01:46.301750Z","error":"Nomain\u012bts bildes ar id 22 apraksts","user":"admin"}
+{"timestamp":"2023-06-27T13:01:59.235780Z","error":"Nolaikota bilde ar id 10","user":"admin"}
+{"timestamp":"2023-06-27T13:02:00.999075Z","error":"Dislaikota bilde ar id 10","user":"admin"}
+{"timestamp":"2023-06-27T13:02:01.761066Z","error":"Nolaikota bilde ar id 10","user":"admin"}
+{"timestamp":"2023-06-27T13:02:05.238476Z","error":"Image with id1 viewed!","user":"admin"}
+{"timestamp":"2023-06-27T13:11:29.870468Z","error":"Lietot\u0101ja q2e22qe2q1 pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:11:32.031258Z","error":"Lietot\u0101ja q2e22qe2q12 pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:11:33.118471Z","error":"Lietot\u0101ja q2e22qe2q123 pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:11:34.092015Z","error":"Lietot\u0101ja q2e22qe2q1231 pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:11:34.323202Z","error":"Lietot\u0101ja q2e22qe2q12312 pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:11:34.439610Z","error":"Lietot\u0101ja q2e22qe2q123123 pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:11:35.222770Z","error":"Lietot\u0101ja 1 pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:11:35.465784Z","error":"Lietot\u0101ja 12 pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:17:12.227284Z","error":"Lietot\u0101ja q2e22qe2q11 v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:17:13.724323Z","error":"Lietot\u0101ja q2e22qe2q112 v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:17:14.225146Z","error":"Lietot\u0101ja q2e22qe2q1123 v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:17:15.971533Z","error":"Lietot\u0101ja z v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:17:16.270245Z","error":"Lietot\u0101ja zi v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:17:16.507297Z","error":"Lietot\u0101ja zig v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:17:17.047046Z","error":"Lietot\u0101ja zigm v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:17:17.824246Z","error":"Lietot\u0101ja zigmu v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:17:17.941838Z","error":"Lietot\u0101ja zigmun v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:17:18.120236Z","error":"Lietot\u0101ja zigmung v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:17:18.241871Z","error":"Lietot\u0101ja zigmungs v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:17:19.334892Z","error":"Lietot\u0101ja zigmung v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:17:19.506307Z","error":"Lietot\u0101ja zigmun v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:17:19.576269Z","error":"Lietot\u0101ja zigmund v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:17:19.646020Z","error":"Lietot\u0101ja zigmunds v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:17:43.751274Z","error":"Lietot\u0101ja j v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:17:43.946162Z","error":"Lietot\u0101ja ju v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:17:44.267981Z","error":"Lietot\u0101ja jur v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:17:44.384297Z","error":"Lietot\u0101ja juri v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:17:44.455095Z","error":"Lietot\u0101ja juris v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:20:06.633033Z","error":"Lietot\u0101ja juris v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:20:11.163175Z","error":"Lietot\u0101ja juris v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:20:12.801845Z","error":"Lietot\u0101ja juris v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:20:16.277095Z","error":"Lietot\u0101ja juris v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:20:18.341489Z","error":"Lietot\u0101ja juris v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:20:19.764571Z","error":"Lietot\u0101ja juris v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:20:26.522079Z","error":"Lietot\u0101ja juris v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:21:05.415976Z","error":"Lietot\u0101ja juris v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:21:06.363322Z","error":"Lietot\u0101ja juris v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:22:09.687434Z","error":"Lietot\u0101ja 1 v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:22:09.879796Z","error":"Lietot\u0101ja 12 v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:22:10.016875Z","error":"Lietot\u0101ja 123 v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:22:58.462885Z","error":"Image with idundefined viewed!","user":"admin"}
+{"timestamp":"2023-06-27T13:23:59.225094Z","error":"Lietot\u0101ja i v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:23:59.584653Z","error":"Lietot\u0101ja il v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:23:59.826557Z","error":"Lietot\u0101ja ilg v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:23:59.897500Z","error":"Lietot\u0101ja ilgm v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:26:09.639777Z","error":"Lietot\u0101ja ilgs v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:26:52.552783Z","error":"Lietot\u0101ja ilgs1 v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:26:55.376263Z","error":"Lietot\u0101ja ilgs11 v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:26:55.874810Z","error":"Lietot\u0101ja ilgs112 v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:26:56.391913Z","error":"Lietot\u0101ja ilgs1123 v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:26:56.617515Z","error":"Lietot\u0101ja ilgs11232 v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:26:56.988232Z","error":"Lietot\u0101ja ilgs112322 v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:26:57.367689Z","error":"Lietot\u0101ja ilgs1123221 v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:26:57.490398Z","error":"Lietot\u0101ja ilgs11232212 v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:27:01.669795Z","error":"Lietot\u0101ja ilgs112322121 v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:27:04.087668Z","error":"Lietot\u0101ja ilgs1123221211 v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:36:13.786072Z","error":"Lietot\u0101ja 1 v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:36:14.732119Z","error":"Lietot\u0101ja 12 v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:36:15.612246Z","error":"Lietot\u0101ja 123 v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:36:16.386997Z","error":"Lietot\u0101ja 1232 v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:36:16.505791Z","error":"Lietot\u0101ja 12323 v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:36:16.925729Z","error":"Lietot\u0101ja 123232 v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:36:17.056351Z","error":"Lietot\u0101ja 1232323 v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:36:17.181546Z","error":"Lietot\u0101ja 12323232 v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:36:17.254141Z","error":"Lietot\u0101ja 123232323 v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:36:32.810320Z","error":"Lietot\u0101ja 1 v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:36:33.000389Z","error":"Lietot\u0101ja 12 v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:36:33.121882Z","error":"Lietot\u0101ja 123 v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:41:33.856249Z","error":"Lietot\u0101ja m v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:41:33.925769Z","error":"Lietot\u0101ja ma v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:41:34.343276Z","error":"Lietot\u0101ja mar v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:41:34.576516Z","error":"Lietot\u0101ja mari v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:41:34.648966Z","error":"Lietot\u0101ja maris v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:44:44.216561Z","error":"Lietot\u0101ja mari v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:44:44.709309Z","error":"Lietot\u0101ja mar v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:44:44.828565Z","error":"Lietot\u0101ja ma v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:44:46.435307Z","error":"Lietot\u0101ja m v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:44:48.849223Z","error":"Lietot\u0101ja ma v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:44:49.573843Z","error":"Lietot\u0101ja mar v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:44:49.777959Z","error":"Lietot\u0101ja mari v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:44:49.895783Z","error":"Lietot\u0101ja maris v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:45:04.445642Z","error":"Lietot\u0101ja mari v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:45:05.020019Z","error":"Lietot\u0101ja mar v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:45:05.319360Z","error":"Lietot\u0101ja ma v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:45:05.831231Z","error":"Lietot\u0101ja m v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:45:06.179710Z","error":"Lietot\u0101ja ma v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:45:06.476696Z","error":"Lietot\u0101ja mar v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:45:06.784992Z","error":"Lietot\u0101ja mari v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:45:06.852739Z","error":"Lietot\u0101ja maris v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:45:10.191810Z","error":"Lietot\u0101ja mariss v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:45:10.898871Z","error":"Lietot\u0101ja marisss v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:45:13.050302Z","error":"Lietot\u0101ja m v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:45:14.417865Z","error":"Lietot\u0101ja ma v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:47:12.834769Z","error":"Lietot\u0101ja mari v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:47:13.279715Z","error":"Lietot\u0101ja mar v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:47:13.520710Z","error":"Lietot\u0101ja ma v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:47:17.969989Z","error":"Lietot\u0101ja mar v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:47:18.403597Z","error":"Lietot\u0101ja mari v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:47:18.733424Z","error":"Lietot\u0101ja maris v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:51:45.119018Z","error":"Lietot\u0101ja mariss v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:51:45.357404Z","error":"Lietot\u0101ja marisss v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:51:45.481141Z","error":"Lietot\u0101ja marissss v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:53:07.844969Z","error":"Lietot\u0101ja marisssss v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:53:08.511791Z","error":"Lietot\u0101ja marissssss v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:53:22.421029Z","error":"Lietot\u0101ja marisssss v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:53:22.745130Z","error":"Lietot\u0101ja marissss v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:53:22.994305Z","error":"Lietot\u0101ja marisss v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:53:23.256161Z","error":"Lietot\u0101ja mariss v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:53:23.324938Z","error":"Lietot\u0101ja maris v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:54:41.789864Z","error":"Lietot\u0101ja mariss v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:54:42.039194Z","error":"Lietot\u0101ja marisss v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:54:42.161251Z","error":"Lietot\u0101ja marissss v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:54:45.072597Z","error":"Lietot\u0101ja marisss v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:54:45.386661Z","error":"Lietot\u0101ja mariss v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:54:45.505988Z","error":"Lietot\u0101ja maris v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:55:58.367956Z","error":"Lietot\u0101ja maris  v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:55:58.674463Z","error":"Lietot\u0101ja maris j v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:55:58.793780Z","error":"Lietot\u0101ja maris ja v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:56:00.253612Z","error":"Lietot\u0101ja maris  v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:56:02.481571Z","error":"Lietot\u0101ja maris l v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:56:02.856365Z","error":"Lietot\u0101ja maris li v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:56:03.398213Z","error":"Lietot\u0101ja maris lie v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:56:03.519712Z","error":"Lietot\u0101ja maris liep v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:56:03.692430Z","error":"Lietot\u0101ja maris liepi v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:56:03.768123Z","error":"Lietot\u0101ja maris liepin v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:56:03.971606Z","error":"Lietot\u0101ja maris  v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:57:21.891478Z","error":"Lietot\u0101ja maris  v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:57:22.150044Z","error":"Lietot\u0101ja maris s v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:57:22.273966Z","error":"Lietot\u0101ja maris sd v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:57:24.623023Z","error":"Lietot\u0101ja maris sd  v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:57:25.030335Z","error":"Lietot\u0101ja maris sd 1 v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:57:25.098570Z","error":"Lietot\u0101ja maris sd 12 v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T13:57:25.224955Z","error":"Lietot\u0101ja maris sd 123 v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T14:02:26.342868Z","error":"Lietot\u0101ja maris sd 123s v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T14:02:27.285480Z","error":"Lietot\u0101ja maris sd 123sd v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T14:02:27.678263Z","error":"Lietot\u0101ja maris sd 123sds v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T14:02:27.796321Z","error":"Lietot\u0101ja maris sd 123sdsd v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T14:02:30.018876Z","error":"Lietot\u0101ja maris sd  v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T14:02:31.398403Z","error":"Lietot\u0101ja maris  v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T14:02:33.581299Z","error":"Lietot\u0101ja maris v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T14:02:36.332394Z","error":"Lietot\u0101ja maris  v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T14:02:37.028000Z","error":"Lietot\u0101ja maris l v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T14:02:37.438566Z","error":"Lietot\u0101ja maris li v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T14:02:37.638225Z","error":"Lietot\u0101ja maris lie v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T14:02:37.767427Z","error":"Lietot\u0101ja maris liep v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T14:02:37.836627Z","error":"Lietot\u0101ja maris liepi v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T14:05:12.157561Z","error":"Lietot\u0101ja maris liepi v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T14:05:15.024306Z","error":"Lietot\u0101ja maris liepi v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T14:05:18.541264Z","error":"Lietot\u0101ja maris liepi v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T14:06:45.712403Z","error":"Lietot\u0101ja maris liepins v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T14:06:45.835783Z","error":"Lietot\u0101ja maris liepins v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T14:06:50.759970Z","error":"Lietot\u0101ja maris  v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T14:06:53.498943Z","error":"Lietot\u0101ja maris karr v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T14:06:53.734117Z","error":"Lietot\u0101ja maris karr v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T14:06:54.097023Z","error":"Lietot\u0101ja maris karr v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T14:06:54.177656Z","error":"Lietot\u0101ja maris karr v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T14:06:57.249636Z","error":"Lietot\u0101ja maris karsa v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T14:06:58.484879Z","error":"Lietot\u0101ja maris karsakdbnasnd v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T14:06:59.582332Z","error":"Lietot\u0101ja maris karsakdbnasnd v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T14:07:00.229937Z","error":"Lietot\u0101ja maris karsakdbnasnd v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T14:07:01.063540Z","error":"Lietot\u0101ja maris karsakdbnasnd v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T14:07:01.181414Z","error":"Lietot\u0101ja maris karsakdbnasnd v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T14:07:01.250369Z","error":"Lietot\u0101ja maris karsakdbnasnd v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T14:07:01.511967Z","error":"Lietot\u0101ja maris karsakdbnasnd v\u0101rds pamain\u012bts","user":"admin"}
+{"timestamp":"2023-06-27T14:07:01.703285Z","error":"Lietot\u0101ja maris karsakdbnasnd v\u0101rds pamain\u012bts","user":"admin"}

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Card, Col, Row, Avatar, Button, Input, Upload, message, Spin} from 'antd';
 import { useParams, useNavigate} from 'react-router-dom';
 import axios from 'axios';
+// import { debounce } from 'lodash'; 
 
 import './App.css';
 
@@ -60,14 +61,49 @@ const Profile = ( { token } ) => {
     }
   }, [token, id]);
 
+  const debounce = (func, delay) => {
+    let timerId;
+
+    return (...args) => {
+      clearTimeout(timerId);
+
+      timerId = setTimeout(() => {
+        func(...args);
+      }, delay);
+    };
+  };
+
+  const debounceDelay = 1000;
+
   const handleNameChange = (event) => {
     const newName = event.target.value;
+    const formData = new FormData();
+    formData.append('name', newName);
     setUser((prevUser) => ({ ...prevUser, name: newName }));
+
+    axios
+      .post(`http://localhost:2000/api/users/${id}/change_name`, formData, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      .then((response) => {
+        save_log('Lietotāja ' + newName + ' vārds pamainīts', token);
+      });
   };
+
+  const debouncedHandleNameChange = debounce(handleNameChange, debounceDelay);
+
+  const handleChange = (event) => {
+    setUser((prevUser) => ({ ...prevUser, name: event.target.value }));
+    debouncedHandleNameChange(event);
+  };
+  
 
   const handleProfilePictureChange = (file) => {
     const formData = new FormData();
     formData.append('image', file);
+    
     axios
     .post(`http://localhost:2000/api/users/${id}/change_profile_image`, formData, {
       headers: {
@@ -76,6 +112,7 @@ const Profile = ( { token } ) => {
     })
     .then(() => {
       message.success('Nomainita profila bilde!');
+      
       axios
         .get(`http://localhost:2000/api/user/${id}`)
         .then((response) => {
@@ -145,7 +182,7 @@ const Profile = ( { token } ) => {
       {token && auth_user  && ((auth_user.name == user.name) || auth_user.role === 'admin') ? ( <>
       <Input
         value={user.name}
-        onChange={handleNameChange}
+        onChange={handleChange}
         style={{ marginBottom: '16px' }}
         placeholder="Jaunais vards"
       />

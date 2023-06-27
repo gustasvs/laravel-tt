@@ -22,6 +22,7 @@ Route::get('/redirect_home', [HomeController::class, 'redirect_home']);
 Route::get('/users', [UserController::class, 'get_users']);
 Route::post('/users/{id}/store_profile_image', [HomeController::class, 'api_store_profile_picture'])->middleware('auth:sanctum');
 Route::post('/users/{id}/change_profile_image', [UserController::class, 'api_change_profile_picture'])->middleware('auth:sanctum');
+Route::post('/users/{id}/change_name', [UserController::class, 'change_name'])->middleware('auth:sanctum');
 Route::post('/users/{id}/delete', [UserController::class, 'api_delete'])->middleware('auth:sanctum');
 Route::get('/user/{id}', [UserController::class, 'get_user']);
 
