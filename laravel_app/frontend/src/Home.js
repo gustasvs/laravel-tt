@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Avatar, Card, Row, Col, Button, Space, Upload, message, Input, Modal, Spin} from 'antd';
-import { LikeOutlined, DislikeOutlined, DeleteOutlined, UploadOutlined } from '@ant-design/icons';
+import { Avatar, Card, Row, Col, Button, Space, Upload, message, Input, Modal, Spin } from 'antd';
+import { LikeOutlined, DislikeOutlined, DeleteOutlined, UploadOutlined, EyeOutlined, SwitcherTwoTone, CalendarOutlined } from '@ant-design/icons';
 import axios from 'axios';
 import './App.css';
 
@@ -17,6 +17,7 @@ const Home = ( { token } ) => {
   const [users, setUsers] = useState([]);
   const [userImages, setUserImages] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [sortBy, setSortBy] = useState('date');
 
   const fetchUserImages = () => {
     axios
@@ -39,6 +40,22 @@ const Home = ( { token } ) => {
       });
   };
   
+  const handleSortBy = () => {
+    const newSortBy = sortBy === 'views' ? 'date' : 'views';
+    setSortBy(newSortBy);
+
+    const sortedImages = [...galleryImages].sort((a, b) => {
+      if (newSortBy === 'views') {
+        return a.views - b.views;
+      } else if (newSortBy === 'date') {
+        return new Date(a.date) - new Date(b.date);
+      }
+      return 0;
+    });
+    
+    setGalleryImages(sortedImages);
+  };
+
   useEffect(() => {
     setLoading(true);
     if (token) {
@@ -57,7 +74,8 @@ const Home = ( { token } ) => {
         fetchUserImages();
     }
     axios.get(`http://localhost:2000/api/images`).then((response) => {
-        const imagesWithUrls = response.data.map((image) => ({
+      console.log(response.data);  
+      const imagesWithUrls = response.data.map((image) => ({
           ...image,
           url: `http://localhost:2000/storage/images/${image.filename}`, // Replace with the base URL of your file server
           author_profile_picture_path: `${image.user.profile_picture_path}`,
@@ -94,7 +112,6 @@ const Home = ( { token } ) => {
         setGalleryImages(updatedGalleryImages);
         save_log('Nolaikota bilde ar id ' + imageId, token);
         fetchUserImages();
-        // setGalleryImages()
         console.log('Image liked successfully:', response.data);
 
         // axios.get('http://localhost:2000/api/users').then(response => {setUsers(response.data);}).catch(error => {console.error(error);});
@@ -103,7 +120,6 @@ const Home = ( { token } ) => {
       .catch(error => {
         save_log('Neizdevas nolaikot bildi ar id ' + imageId, token);
         console.error('Error liking image:', error);
-        // Handle error if needed
       });
     } else {
       console.error('Neautentificets lietotajs');
@@ -156,10 +172,35 @@ const Home = ( { token } ) => {
 
   const [popupImage, setPopupImage] = useState(null);
 
-  const handleOpenPopup = (image) => {
-    if (auth_user && (auth_user.role === 'admin' || image.author_name == auth_user.name))
-      setPopupImage(image);
+  const handleView = (image, imageId) => {
+    const x = image.id;
+    console.log(image.id, imageId, x);
+    if (token) {
+      axios.post(`http://localhost:2000/api/images/${x}/view`, {}, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      .then(response => {
+        const updatedGalleryImages = galleryImages.map((image2) => {
+          if (image2.id === x) {
+            return { ...image2, views: response.data };
+          }
+          return image2;
+        });
+        setGalleryImages(updatedGalleryImages);
+        save_log('Image with id' + imageId + ' viewed!', token);
+        fetchUserImages();
+        setPopupImage(image);
+      })
+      .catch(error => {
+        console.error('Error viewing image:', error);
+      });
+    } else {
+        console.error('Neautentificets lietotajs');
+    }
   };
+
 
   const handleClosePopup = () => {
     setPopupImage(null);
@@ -287,7 +328,7 @@ const Home = ( { token } ) => {
                   hoverable
                   cover={
                     <div className='square-image'>
-                    <img alt={image.apraksts} src={image.url} style={{ borderRadius: '8px' }} onClick={() => handleOpenPopup(image)} />
+                    <img alt={image.apraksts} src={image.url} style={{ borderRadius: '8px' }} onClick={() => handleView(image, image.id)} />
                     </div>
                     }
                   actions={[
@@ -308,8 +349,26 @@ const Home = ( { token } ) => {
           </>)}
           {(token && <><h1>Citu lietotaju bildes</h1></>)}
           {(!token && <><h1>Galerija</h1></>)}
+          <Button
+            className='kartot_poga'
+            onClick={handleSortBy}
+            type="text"
+
+          >
+            {sortBy === 'views' ? <EyeOutlined /> : <CalendarOutlined />}
+            {sortBy === 'views' ? 'Kārtot pēc skatījumiem' : 'Kārtot pēc datuma'}
+          </Button>
           <Row gutter={[50, 50]} style={{ marginRight: '20px' }}>
-            {galleryImages.map((image, index) => (
+            {galleryImages
+            .sort((imageA, imageB) => {
+              if (sortBy === 'views') {
+                return imageB.views - imageA.views;
+              } else if (sortBy === 'date') {
+                return imageB.id - imageA.id;
+              }
+              return 0;
+            })
+            .map((image, index) => (
               (!token || (auth_user && image.user.name !== auth_user.name)) && 
               <>
               {(index + 1) % 3 === 0 &&
@@ -345,7 +404,7 @@ const Home = ( { token } ) => {
                 <Card hoverable
                   cover={
                     <div className='square-image'>
-                      <img alt={image.apraksts} src={image.url} onClick={() => handleOpenPopup(image)} />
+                      <img alt={image.apraksts} src={image.url} onClick={() => handleView(image)} />
                   </div>
                   }
                   actions={[
@@ -356,6 +415,7 @@ const Home = ( { token } ) => {
                         {auth_user.role === 'admin' &&
                         <Button icon={<DeleteOutlined />} onClick={() => handleDelete(image.id)} type="text" danger />
                         }
+                        <Button className='skatijumi' icon={<EyeOutlined />} type="text"> {image.views} </Button>
                         </Space>
                     ) : null
                   ]}

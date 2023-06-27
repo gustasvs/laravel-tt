@@ -48,31 +48,18 @@ class UserController extends Controller
 
         if (Auth::check()) {
             $authenticatedUser = auth()->user();
-
-            // Create a new instance of User model
             $tmp = new User();
-
-            // Assign the attributes from the authenticated user to the new user
-            // $tmp->id == $authenticatedUser->id;
             $tmp->name = $authenticatedUser->name;
             $tmp->email = $authenticatedUser->email;
             $tmp->password = $authenticatedUser->password;
             $tmp->role = $authenticatedUser->role;
             $tmp->profile_picture_path = $authenticatedUser->profile_picture_path;
-
-            // Return the data of the new user
             return response()->json($tmp);
         } else {
             return response()->json(['error' => 'User is not authenticated'], 401);
-            // Create a new instance of User model
             $anonymousUser = new User();
-
-            // Set default values for specific attributes
             $anonymousUser->name = 'Empty';
             $anonymousUser->email = 'empty@email.com';
-            // Set other default values for other attributes...
-
-            // Return the new user object
             return response()->json($anonymousUser);
         }
     }
@@ -84,10 +71,6 @@ class UserController extends Controller
         if (Auth::attempt($credentials)) {
             $user = Auth::user();
             $token = $user->createToken('authToken')->plainTextToken;
-
-            // Debugging: Log the user ID and token
-            \Log::info('User ID: ' . $user->name);
-            \Log::info('Token: ' . $token);
 
             return response()->json(['token' => $token], 200);
         } else {
@@ -107,10 +90,6 @@ class UserController extends Controller
             $user = Auth::user();
             $token = $user->createToken('authToken')->plainTextToken;
 
-            // Debugging: Log the user ID and token
-            \Log::info('User ID: ' . $user->name);
-            \Log::info('Token: ' . $token);
-
             return response()->json(['token' => $token], 200);
         } else {
             return response()->json(['error' => 'Invalid credentials'], 401);
@@ -123,10 +102,6 @@ class UserController extends Controller
             $user = Auth::user();
             $token = $user->createToken('authToken')->plainTextToken;
 
-            // Debugging: Log the user ID and token
-            // \Log::info('User ID: ' . $user->id);
-            // \Log::info('Token: ' . $token);
-
             return response()->json(['token' => $token], 200);
         } else {
             return response()->json(['error' => 'User is not authenticated'], 401);
@@ -135,7 +110,6 @@ class UserController extends Controller
 
     public function profile(User $user)
     {
-        // Do any necessary processing to display the user's profile
         return view('users.profile', ['user' => $user]);
     }
     public function change_profile_picture(Request $request, string $id)
@@ -143,14 +117,10 @@ class UserController extends Controller
         if ($request->hasFile('image')) {
             $image = $request->file('image');
 
-            // Generate a unique filename for the image
             $filename = uniqid() . '.' . $image->getClientOriginalExtension();
 
-            // Move the uploaded image to the storage directory
             $path = $image->storeAs('public/images', $filename);
 
-            // Save the image details to the database
-            // $user = auth()->user();
             $user = User::findOrFail($id);
             $user->profile_picture_path = $filename;
             $user->save();
@@ -166,17 +136,13 @@ class UserController extends Controller
         // return response()->json($user);
 
         $user = User::findOrFail($id);
-        \Log::info('changable id: ' . $id);
         if ($request->hasFile('image')) {
             $image = $request->file('image');
 
-            // Generate a unique filename for the image
             $filename = uniqid() . '.' . $image->getClientOriginalExtension();
 
-            // Move the uploaded image to the storage directory
             $path = $image->storeAs('public/images', $filename);
 
-            // Save the image details to the database
             // $user = auth()->user();
             $user->profile_picture_path = $filename;
             $user->save();
@@ -192,9 +158,7 @@ class UserController extends Controller
     }
     public function get_some_user_images(string $id) {
         $user = User::findOrFail($id);
-        // $images = $user->images->with('user')->get()
         $images = $user->images;
-        \Log::info('images: ' . $images);
         return response()->json($images);
     }
     public function api_delete(string $id) {

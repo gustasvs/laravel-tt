@@ -32,6 +32,7 @@ Route::get('/images', [ImageController::class, 'get_images']);
 Route::post('/images', [ImageController::class, 'api_store'])->middleware('auth:sanctum');
 Route::delete('/images/{id}', [ImageController::class, 'api_destroy'])->middleware('auth:sanctum');
 Route::post('/images/{id}/like', [ImageController::class, 'api_like'])->middleware('auth:sanctum');
+Route::post('/images/{id}/view', [ImageController::class, 'api_view'])->middleware('auth:sanctum');
 Route::post('/images/{id}/dislike', [ImageController::class, 'api_dislike'])->middleware('auth:sanctum');
 Route::put('/images/{id}/update_desc', [ImageController::class, 'api_update_description'])->middleware('auth:sanctum');
 

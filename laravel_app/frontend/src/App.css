@@ -158,3 +158,16 @@
   /* font-size: 8100px; */
   scale: 3;
 }
+
+
+.skatijumi {
+  opacity: 50%;
+}
+
+.kartot_poga {
+  color: #1890ff;
+  fontWeight: bold;
+  display: flex;
+  alignItems: center;
+  gap: 4px;
+}

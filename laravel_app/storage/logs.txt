@@ -95,3 +95,44 @@
 {"timestamp":"2023-06-27T07:09:17.074422Z","error":"Ienacis jauns lietotajs! Epasts: tester@example.com, vards: tester, loma: user!","user":"tester"}
 {"timestamp":"2023-06-27T07:09:23.472963Z","error":"Ielikta jauna bilde!","user":"tester"}
 {"timestamp":"2023-06-27T07:09:42.209372Z","error":"Bilde ar id 21 izdzesta!","user":"tester"}
+{"timestamp":"2023-06-27T10:21:38.224186Z","error":"Lietotajs izgajis no sistemas!","user":"tester"}
+{"timestamp":"2023-06-27T10:21:43.060929Z","error":"Ienacis jauns lietotajs! Epasts: admin@example.com, vards: admin, loma: admin!","user":"admin"}
+{"timestamp":"2023-06-27T10:29:55.590240Z","error":"Nolaikota bilde ar id 17","user":"admin"}
+{"timestamp":"2023-06-27T10:29:56.549467Z","error":"Nolaikota bilde ar id 10","user":"admin"}
+{"timestamp":"2023-06-27T10:30:01.182937Z","error":"Dislaikota bilde ar id 17","user":"admin"}
+{"timestamp":"2023-06-27T10:30:01.774253Z","error":"Nolaikota bilde ar id 17","user":"admin"}
+{"timestamp":"2023-06-27T10:30:02.336713Z","error":"Dislaikota bilde ar id 17","user":"admin"}
+{"timestamp":"2023-06-27T10:30:03.214517Z","error":"Nolaikota bilde ar id 17","user":"admin"}
+{"timestamp":"2023-06-27T10:30:03.352453Z","error":"Nolaikota bilde ar id 17","user":"admin"}
+{"timestamp":"2023-06-27T10:30:04.838489Z","error":"Dislaikota bilde ar id 17","user":"admin"}
+{"timestamp":"2023-06-27T10:30:05.538365Z","error":"Dislaikota bilde ar id 17","user":"admin"}
+{"timestamp":"2023-06-27T10:30:06.202632Z","error":"Dislaikota bilde ar id 17","user":"admin"}
+{"timestamp":"2023-06-27T10:31:39.707689Z","error":"Ienacis jauns lietotajs! Epasts: admin@example.com, vards: admin, loma: admin!","user":"admin"}
+{"timestamp":"2023-06-27T11:18:54.676372Z","error":"Image with id5 viewed!","user":"admin"}
+{"timestamp":"2023-06-27T11:19:14.528561Z","error":"Image with id17 viewed!","user":"admin"}
+{"timestamp":"2023-06-27T11:19:24.533610Z","error":"Image with id17 viewed!","user":"admin"}
+{"timestamp":"2023-06-27T11:19:36.574792Z","error":"Image with id17 viewed!","user":"admin"}
+{"timestamp":"2023-06-27T11:19:40.456155Z","error":"Image with id17 viewed!","user":"admin"}
+{"timestamp":"2023-06-27T11:19:44.197246Z","error":"Image with id18 viewed!","user":"admin"}
+{"timestamp":"2023-06-27T11:21:00.698599Z","error":"Image with id10 viewed!","user":"admin"}
+{"timestamp":"2023-06-27T11:22:01.208021Z","error":"Image with id5 viewed!","user":"admin"}
+{"timestamp":"2023-06-27T11:29:58.590589Z","error":"Image with idundefined viewed!","user":"admin"}
+{"timestamp":"2023-06-27T11:30:06.172156Z","error":"Image with idundefined viewed!","user":"admin"}
+{"timestamp":"2023-06-27T11:30:37.514750Z","error":"Image with idundefined viewed!","user":"admin"}
+{"timestamp":"2023-06-27T11:30:41.140134Z","error":"Image with idundefined viewed!","user":"admin"}
+{"timestamp":"2023-06-27T11:30:43.233351Z","error":"Image with idundefined viewed!","user":"admin"}
+{"timestamp":"2023-06-27T11:31:16.020956Z","error":"Image with idundefined viewed!","user":"admin"}
+{"timestamp":"2023-06-27T11:31:18.495741Z","error":"Image with idundefined viewed!","user":"admin"}
+{"timestamp":"2023-06-27T11:31:20.301937Z","error":"Image with idundefined viewed!","user":"admin"}
+{"timestamp":"2023-06-27T12:01:32.296556Z","error":"Dislaikota bilde ar id 18","user":"admin"}
+{"timestamp":"2023-06-27T12:01:33.021797Z","error":"Nolaikota bilde ar id 18","user":"admin"}
+{"timestamp":"2023-06-27T12:01:33.786839Z","error":"Nolaikota bilde ar id 18","user":"admin"}
+{"timestamp":"2023-06-27T12:01:34.818547Z","error":"Image with idundefined viewed!","user":"admin"}
+{"timestamp":"2023-06-27T12:01:36.405623Z","error":"Image with idundefined viewed!","user":"admin"}
+{"timestamp":"2023-06-27T12:01:37.719040Z","error":"Image with idundefined viewed!","user":"admin"}
+{"timestamp":"2023-06-27T12:01:39.123688Z","error":"Image with idundefined viewed!","user":"admin"}
+{"timestamp":"2023-06-27T12:01:44.051081Z","error":"Image with idundefined viewed!","user":"admin"}
+{"timestamp":"2023-06-27T12:01:45.150166Z","error":"Image with idundefined viewed!","user":"admin"}
+{"timestamp":"2023-06-27T12:01:47.761526Z","error":"Image with idundefined viewed!","user":"admin"}
+{"timestamp":"2023-06-27T12:05:02.318470Z","error":"Image with idundefined viewed!","user":"admin"}
+{"timestamp":"2023-06-27T12:09:15.018666Z","error":"Image with idundefined viewed!","user":"admin"}

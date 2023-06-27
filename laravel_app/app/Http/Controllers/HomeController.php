@@ -94,36 +94,14 @@ class HomeController extends Controller
     }
     public function register(Request $request)
     {
-        // // Process user registration data
-
-        // // Upload and store the image
-        // if ($request->hasFile('image')) {
-        //     $image = $request->file('image');
-        //     $filename = $image->getClientOriginalName();
-        //     $path = $image->storeAs('images', $filename);
-            
-        //     // Store the image information in the images table
-        //     $user->images()->create([
-        //         'filename' => $filename,
-        //         'path' => $path,
-        //     ]);
-        // }
-
-        // // Redirect or perform other actions
-            // $request->validate([
-        //     'image' => 'required|image|max:2048',
-        // ]);
 
         if ($request->hasFile('image')) {
             $image = $request->file('image');
 
-            // Generate a unique filename for the image
             $filename = uniqid() . '.' . $image->getClientOriginalExtension();
 
-            // Move the uploaded image to the storage directory
             $path = $image->storeAs('public/images', $filename);
 
-            // Save the image details to the database
             $user = auth()->user();
             $user->images()->create([
                 'filename' => $filename,
@@ -139,58 +117,37 @@ class HomeController extends Controller
         $error = $request->input('error');
         $userName = $request->input('userName');
 
-        // Create a log data array
         $logData = [
             'timestamp' => now(),
             'error' => $error,
             'user' => $userName,
         ];
 
-        // Convert the log data to JSON
         $logJson = json_encode($logData);
-
-        // Path to the log file
         $filePath = storage_path('logs.txt');
-
-        // Append the log entry to the file
         file_put_contents($filePath, $logJson . PHP_EOL, FILE_APPEND);
-
-        // Return a response indicating success
-        return response()->json(['message' => 'Log saved successfully']);
+        return response()->json(['message' => 'Saglabāts ieraksts žurnālā.']);
     }
     public function get_logs()
     {
-        // Path to the log file
         $filePath = storage_path('logs.txt');
-
-        // Read the contents of the log file
         $logContents = file_get_contents($filePath);
-
-        // Convert the log contents to an array of log entries
         $logEntries = explode(PHP_EOL, $logContents);
-
-        // Remove empty log entries
         $logEntries = array_filter($logEntries);
 
-        // Parse each log entry as JSON and add it to the logs array
         $logs = [];
         foreach ($logEntries as $logEntry) {
             $logData = json_decode($logEntry, true);
             $logs[] = $logData;
         }
 
-        // Return the logs as a JSON response
         return response()->json($logs);
     }
     public function delete_logs()
     {
-        // Path to the log file
         $filePath = storage_path('logs.txt');
-
         file_put_contents($filePath, '');
-
-        // Return a response indicating success
-        return response()->json(['message' => 'Logs deleted successfully']);
+        return response()->json(['message' => 'Izdzēsti sistēmas ieraksti']);
     }
 
 }

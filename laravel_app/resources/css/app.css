@@ -3,3 +3,10 @@
     height: 50px;
   }
   
+.kartot_poga {
+  color: '#1890ff',
+  fontWeight: 'bold',
+  display: 'flex',
+  alignItems: 'center',
+  gap: '4px',
+}

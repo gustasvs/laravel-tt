@@ -90,7 +90,6 @@ const UserProfilePage = ( {token} ) => {
     .catch((error) => {
       console.log({error});
       save_log('Neizdevas nomainīt lomu lietotājam.' + user.name, " ar kļūdu: " + error, token);
-      // Handle error if needed
     });
   };
 

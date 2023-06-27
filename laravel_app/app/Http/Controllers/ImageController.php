@@ -209,6 +209,14 @@ class ImageController extends Controller
         }
         return response()->json($image->likes);
     }
+    public function api_view(string $id) {
+
+        $user = auth()->user();
+        $image = Image::findOrFail($id);
+
+        $image->increment('views');
+        return response()->json($image->views);
+    }
     public function api_dislike(string $id) {
         $image = Image::findOrFail($id);
         if (auth()->user()->likes()->where('image_id', $id)->exists()) {

@@ -21,6 +21,7 @@ return new class extends Migration
             $table->integer('likes')->default(0);
             // Define foreign key constraint
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            // $table->integer('views')->default(0);
         });
 
         Schema::create('image_user', function (Blueprint $table) {

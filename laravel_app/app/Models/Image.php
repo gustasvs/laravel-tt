@@ -15,7 +15,8 @@ class Image extends Model
         'filename',
         'path',
         'apraksts',
-        'likes'
+        'likes',
+        'views'
     ];
 
     public function user()
