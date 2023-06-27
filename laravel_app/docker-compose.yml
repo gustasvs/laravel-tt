@@ -1,0 +1,53 @@
+version: '3.7'
+services:
+  db:
+    image: mysql:latest
+    container_name: db
+    restart: unless-stopped
+    ports:
+      - "3308:3306"
+    environment:
+      MYSQL_DATABASE: laraveldb
+      MYSQL_USER: laravel
+      MYSQL_PASSWORD: laravelpassworddb
+      MYSQL_ROOT_PASSWORD: rootpasswordmysql
+    volumes:
+      - mysqldata:/var/lib/mysql/
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    volumes:
+      - ./frontend:/app
+    ports:
+      - 3000:3000
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        UID: 1000
+        USER: dev
+    volumes:
+      - ./:/var/www/html
+      - ./php.ini:/usr/local/etc/php/conf.d/php.ini
+    environment:
+      DB_HOST: db
+      DB_DATABASE: laraveldb
+      DB_USER: laravel
+      DB_PORT: 3306
+      DB_PASSWORD: laravelpassworddb
+      DB_ROOT_PASSWORD: rootpasswordmysql
+    ports:
+      - 2000:80
+    depends_on:
+      - db
+    command: bash -c "sleep 10 && php artisan serve --host=0.0.0.0 --port=80"
+
+volumes:
+  mysqldata:
+    driver: local

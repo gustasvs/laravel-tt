@@ -1,0 +1,97 @@
+{"timestamp":"2023-06-26T12:42:07.936583Z","error":"Dislaikota bilde ar id ${imageId}","user":"admin"}
+{"timestamp":"2023-06-26T12:42:36.035535Z","error":"Nolaikota bilde ar id ${imageId}","user":"admin"}
+{"timestamp":"2023-06-26T12:42:37.801627Z","error":"Nolaikota bilde ar id ${imageId}","user":"admin"}
+{"timestamp":"2023-06-26T12:44:04.371854Z","error":"Dislaikota bilde ar id 10","user":"admin"}
+{"timestamp":"2023-06-26T12:44:06.399890Z","error":"Nolaikota bilde ar id 17","user":"admin"}
+{"timestamp":"2023-06-26T12:44:18.881569Z","error":"Dislaikota bilde ar id 10","user":"admin"}
+{"timestamp":"2023-06-26T12:44:19.749839Z","error":"Dislaikota bilde ar id 10","user":"admin"}
+{"timestamp":"2023-06-26T12:44:21.142382Z","error":"Dislaikota bilde ar id 10","user":"admin"}
+{"timestamp":"2023-06-26T12:50:08.568862Z","error":"User logged in, token generated:","user":"admin"}
+{"timestamp":"2023-06-26T12:50:27.770459Z","error":"User logged in, token generated: 339|sPUV40vFJtnhmnA3yyZFPsHQF19aQrxyI4739SES","user":"admin"}
+{"timestamp":"2023-06-26T12:52:02.907953Z","error":"Ienacis jauns lietotajs: [object Object]","user":"admin"}
+{"timestamp":"2023-06-26T12:52:22.421194Z","error":"Ienacis jauns lietotajs: [object Object]","user":"admin"}
+{"timestamp":"2023-06-26T12:54:05.267601Z","error":"Ienacis jauns lietotajs! Epasts: undefined, vards: undefined, loma: undefined!","user":"admin"}
+{"timestamp":"2023-06-26T12:54:41.622467Z","error":"Ienacis jauns lietotajs! Epasts: admin@example.com, vards: admin, loma: admin!","user":"admin"}
+{"timestamp":"2023-06-26T12:54:58.448598Z","error":"Ienacis jauns lietotajs!\n Epasts: admin@example.com, vards: admin, loma: admin!","user":"admin"}
+{"timestamp":"2023-06-26T12:57:36.076573Z","error":"Registrejies jauns lietotajs!","user":"admin"}
+{"timestamp":"2023-06-26T12:58:04.556451Z","error":"Registrejies jauns lietotajs!","user":"123"}
+{"timestamp":"2023-06-26T13:20:27.756161Z","error":"Ienacis jauns lietotajs! Epasts: admin@example.com, vards: admin, loma: admin!","user":"admin"}
+{"timestamp":"2023-06-26T13:20:36.714596Z","error":"Lietotajam 123211231 nomainita profila bilde!","user":"admin"}
+{"timestamp":"2023-06-26T13:25:25.944151Z","error":"Lietotajs 1 izdzests!","user":"admin"}
+{"timestamp":"2023-06-26T14:07:35.970953Z","error":"Ienacis jauns lietotajs! Epasts: admin@example.com, vards: admin, loma: admin!","user":"admin"}
+{"timestamp":"2023-06-26T14:16:20.396978Z","error":"Ienacis jauns lietotajs! Epasts: admin@example.com, vards: admin, loma: admin!","user":"admin"}
+{"timestamp":"2023-06-26T14:17:12.619428Z","error":"Ienacis jauns lietotajs! Epasts: tester@example.com, vards: tester, loma: user!","user":"tester"}
+{"timestamp":"2023-06-26T14:18:31.144886Z","error":"Nolaikota bilde ar id 16","user":"tester"}
+{"timestamp":"2023-06-26T14:25:25.188476Z","error":"Ienacis jauns lietotajs! Epasts: admin@example.com, vards: admin, loma: admin!","user":"admin"}
+{"timestamp":"2023-06-26T14:25:33.105864Z","error":"Ienacis jauns lietotajs! Epasts: tester@example.com, vards: tester, loma: user!","user":"tester"}
+{"timestamp":"2023-06-26T14:26:38.809867Z","error":"Ienacis jauns lietotajs! Epasts: admin@example.com, vards: admin, loma: admin!","user":"admin"}
+{"timestamp":"2023-06-26T14:32:09.134627Z","error":"Ielikta jauna bilde!","user":"admin"}
+{"timestamp":"2023-06-26T14:32:17.492486Z","error":"Bilde ar id 20 izdzesta!","user":"admin"}
+{"timestamp":"2023-06-26T14:37:49.445734Z","error":"Nomainita loma lietotajam q2e22qe2q","user":"admin"}
+{"timestamp":"2023-06-26T14:37:54.913342Z","error":"Nomainita loma lietotajam q2e22qe2q","user":"admin"}
+{"timestamp":"2023-06-26T14:39:34.383892Z","error":"Nomainita loma lietotajam 123","user":"admin"}
+{"timestamp":"2023-06-26T14:40:53.386790Z","error":"Ienacis jauns lietotajs! Epasts: tester@example.com, vards: tester, loma: user!","user":"tester"}
+{"timestamp":"2023-06-26T14:56:56.504654Z","error":"Ienacis jauns lietotajs! Epasts: admin@example.com, vards: admin, loma: admin!","user":"admin"}
+{"timestamp":"2023-06-26T15:20:30.289618Z","error":"Ienacis jauns lietotajs! Epasts: admin@example.com, vards: admin, loma: admin!","user":"admin"}
+{"timestamp":"2023-06-27T06:21:26.937898Z","error":"Nolaikota bilde ar id 10","user":"admin"}
+{"timestamp":"2023-06-27T06:21:28.351244Z","error":"Nolaikota bilde ar id 17","user":"admin"}
+{"timestamp":"2023-06-27T06:21:29.721434Z","error":"Nolaikota bilde ar id 18","user":"admin"}
+{"timestamp":"2023-06-27T06:21:30.694445Z","error":"Nolaikota bilde ar id 19","user":"admin"}
+{"timestamp":"2023-06-27T06:21:31.565206Z","error":"Dislaikota bilde ar id 19","user":"admin"}
+{"timestamp":"2023-06-27T06:21:32.967095Z","error":"Nolaikota bilde ar id 19","user":"admin"}
+{"timestamp":"2023-06-27T06:21:33.394850Z","error":"Nolaikota bilde ar id 19","user":"admin"}
+{"timestamp":"2023-06-27T06:21:34.044033Z","error":"Dislaikota bilde ar id 19","user":"admin"}
+{"timestamp":"2023-06-27T06:21:34.112777Z","error":"Dislaikota bilde ar id 19","user":"admin"}
+{"timestamp":"2023-06-27T06:21:44.773504Z","error":"Nolaikota bilde ar id 10","user":"admin"}
+{"timestamp":"2023-06-27T06:22:49.965281Z","error":"Registrejies jauns lietotajs!","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:22:56.301637Z","error":"Nolaikota bilde ar id 10","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:27:33.922043Z","error":"Nolaikota bilde ar id 19","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:28:52.047618Z","error":"Nolaikota bilde ar id 5","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:28:54.918960Z","error":"Nolaikota bilde ar id 5","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:29:00.527818Z","error":"Nolaikota bilde ar id 5","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:36:11.812323Z","error":"Nolaikota bilde ar id 1","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:36:38.646133Z","error":"Nolaikota bilde ar id 1","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:36:42.388067Z","error":"Nolaikota bilde ar id 16","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:37:41.333587Z","error":"Neizdevas nolaikot bildi ar id 10","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:38:03.382927Z","error":"Nolaikota bilde ar id 18","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:38:06.038955Z","error":"Dislaikota bilde ar id 19","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:38:07.261052Z","error":"Nolaikota bilde ar id 19","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:38:08.479057Z","error":"Nolaikota bilde ar id 18","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:38:09.211621Z","error":"Nolaikota bilde ar id 18","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:38:09.478668Z","error":"Nolaikota bilde ar id 18","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:38:55.136624Z","error":"Dislaikota bilde ar id 10","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:38:56.159137Z","error":"Nolaikota bilde ar id 10","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:38:57.339098Z","error":"Nolaikota bilde ar id 10","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:38:58.458608Z","error":"Nolaikota bilde ar id 16","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:38:59.434848Z","error":"Nolaikota bilde ar id 17","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:38:59.917836Z","error":"Dislaikota bilde ar id 17","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:39:27.680263Z","error":"Nolaikota bilde ar id 5","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:39:28.808628Z","error":"Dislaikota bilde ar id 1","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:39:32.585555Z","error":"Dislaikota bilde ar id 1","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:40:18.035517Z","error":"Dislaikota bilde ar id 1","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:40:19.520836Z","error":"Nolaikota bilde ar id 1","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:40:20.461168Z","error":"Nolaikota bilde ar id 1","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:40:21.306295Z","error":"Dislaikota bilde ar id 1","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:40:22.088692Z","error":"Nolaikota bilde ar id 1","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:40:22.686321Z","error":"Nolaikota bilde ar id 5","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:40:23.422953Z","error":"Dislaikota bilde ar id 5","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:40:24.008290Z","error":"Nolaikota bilde ar id 5","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:40:25.678203Z","error":"Nolaikota bilde ar id 18","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:40:26.193569Z","error":"Nolaikota bilde ar id 18","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:40:26.691437Z","error":"Dislaikota bilde ar id 18","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:40:27.470861Z","error":"Dislaikota bilde ar id 18","user":"asdasdasd"}
+{"timestamp":"2023-06-27T06:40:41.413099Z","error":"Ienacis jauns lietotajs! Epasts: admin@example.com, vards: admin, loma: admin!","user":"admin"}
+{"timestamp":"2023-06-27T06:59:15.162937Z","error":"Nolaikota bilde ar id 17","user":"admin"}
+{"timestamp":"2023-06-27T06:59:16.776555Z","error":"Dislaikota bilde ar id 17","user":"admin"}
+{"timestamp":"2023-06-27T06:59:17.826912Z","error":"Nolaikota bilde ar id 17","user":"admin"}
+{"timestamp":"2023-06-27T06:59:25.532494Z","error":"Dislaikota bilde ar id 19","user":"admin"}
+{"timestamp":"2023-06-27T06:59:26.534870Z","error":"Dislaikota bilde ar id 19","user":"admin"}
+{"timestamp":"2023-06-27T06:59:27.658702Z","error":"Dislaikota bilde ar id 18","user":"admin"}
+{"timestamp":"2023-06-27T06:59:28.414132Z","error":"Nolaikota bilde ar id 18","user":"admin"}
+{"timestamp":"2023-06-27T06:59:42.092417Z","error":"Nomain\u012bta loma lietot\u0101jam 123","user":"admin"}
+{"timestamp":"2023-06-27T06:59:42.571152Z","error":"Nomain\u012bta loma lietot\u0101jam 123","user":"admin"}
+{"timestamp":"2023-06-27T06:59:43.180072Z","error":"Nomain\u012bta loma lietot\u0101jam 123","user":"admin"}
+{"timestamp":"2023-06-27T07:09:11.312521Z","error":"Lietotajs izgajis no sistemas!","user":"admin"}
+{"timestamp":"2023-06-27T07:09:17.074422Z","error":"Ienacis jauns lietotajs! Epasts: tester@example.com, vards: tester, loma: user!","user":"tester"}
+{"timestamp":"2023-06-27T07:09:23.472963Z","error":"Ielikta jauna bilde!","user":"tester"}
+{"timestamp":"2023-06-27T07:09:42.209372Z","error":"Bilde ar id 21 izdzesta!","user":"tester"}
