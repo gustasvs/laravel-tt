@@ -322,8 +322,8 @@ const Home = ( { token } ) => {
     <div>
       <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '16px' }}>
         <div className='main-container'>
+        {(token &&
           <div className='upload-images-container'>
-            {(token &&
             <Upload
               accept="image/*"
               showUploadList={false}
@@ -333,10 +333,11 @@ const Home = ( { token } ) => {
                 Augšupielādēt attēlu
               </Button>
             </Upload>
-            )}
           </div>
+          )}
+          {(token && userImages.length > 0 && 
           <div className='user-images-container'>
-            {(token && userImages.length > 0 && <>
+            
             <h1>Jusu bildes</h1>
             <Row gutter={[50, 50]}>
               {userImages.map((image) => (
@@ -363,13 +364,12 @@ const Home = ( { token } ) => {
                 </Col>
               ))}
             </Row>
-            </>
-            )}
           </div>
+          )}
           <div className='galery-container'>
             <div className='header-container'>
-              {(token && <><h1>Citu lietotaju bildes</h1></>)}
-              {(!token && <><h1>Galerija</h1></>)}
+              {(token && <h1>Citu lietotaju bildes</h1>)}
+              {(!token && <h1>Galerija</h1>)}
               <Button
                 className='kartot_poga'
                 onClick={handleSortBy}

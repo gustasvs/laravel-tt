@@ -760,3 +760,6 @@
 {"timestamp":"2023-06-28T14:10:49.297096Z","error":"Nomain\u012bta loma lietot\u0101jam nullmoni","user":"admin"}
 {"timestamp":"2023-06-28T14:10:58.322877Z","error":"Lietot\u0101ja mizniks_ing v\u0101rds pamain\u012bts","user":"admin"}
 {"timestamp":"2023-06-28T14:11:46.582492Z","error":"Lietotajs izgajis no sistemas!","user":"admin"}
+{"timestamp":"2023-06-28T14:12:25.695990Z","error":"Ienacis jauns lietotajs! Epasts: admin@example.com, vards: admin, loma: admin!","user":"admin"}
+{"timestamp":"2023-06-28T14:15:05.111319Z","error":"Lietotajs izgajis no sistemas!","user":"admin"}
+{"timestamp":"2023-06-28T14:16:23.468485Z","error":"Ienacis jauns lietotajs! Epasts: admin@example.com, vards: admin, loma: admin!","user":"admin"}
