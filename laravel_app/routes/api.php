@@ -25,7 +25,6 @@ Route::post('/users/{id}/change_profile_image', [UserController::class, 'api_cha
 Route::post('/users/{id}/change_name', [UserController::class, 'change_name'])->middleware('auth:sanctum');
 Route::post('/users/{id}/delete', [UserController::class, 'api_delete'])->middleware('auth:sanctum');
 Route::get('/user/{id}', [UserController::class, 'get_user']);
-
 Route::put('/users/{id}', [HomeController::class, 'api_update_role'])->middleware('auth:sanctum');
 
 Route::get('/image/{id}', [ImageController::class, 'get_image']);
@@ -47,6 +46,7 @@ Route::post('/register', [UserController::class, 'register']);
 Route::post('/log', [HomeController::class, 'save_log'])->middleware('auth:sanctum');
 Route::get('/logs', [HomeController::class, 'get_logs'])->middleware('auth:sanctum');
 Route::delete('/logs', [HomeController::class, 'delete_logs'])->middleware('auth:sanctum');
+Route::delete('/logs_half', [HomeController::class, 'logs_half'])->middleware('auth:sanctum');
 
 Route::get('/get_user_images', [UserController::class, 'get_user_images'])->middleware('auth:sanctum');
 Route::get('/get_some_user_images/{id}', [UserController::class, 'get_some_user_images'])->middleware('auth:sanctum');

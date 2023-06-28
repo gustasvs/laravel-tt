@@ -54,11 +54,13 @@ const UserProfilePage = ( {token} ) => {
       key: 'name',
       render: (name, user) => <Link to={`/profile/${user.id}`}>{name}</Link>,
     },
+    ...( token ? [
     {
       title: 'Epasts',
       dataIndex: 'email',
       key: 'email',
     },
+    ] : []),
     {
       title: 'Admina privilegijas',
       dataIndex: 'role',
@@ -85,7 +87,7 @@ const UserProfilePage = ( {token} ) => {
     })
     .then((response) => {
       save_log("Nomainīta loma lietotājam " + user.name, token);
-      // console.log('desc uploaded successfully:', response.data);
+      // console.log('lomas maina:', response);
     })
     .catch((error) => {
       console.log({error});

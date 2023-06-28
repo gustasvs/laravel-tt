@@ -61,6 +61,10 @@
   overflow: hidden;
 }
 
+.button-text {
+  text-decoration: none !important;
+}
+
 .custom-button::before {
   content: '';
   position: absolute;
@@ -181,9 +185,7 @@
   /* margin-right: 10px; */
 }
 
-.header-container button {
-  /* margin-left: 10px; */
-}
+
 
 .main-container {
   flex: 1;
@@ -237,8 +239,10 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 16px;
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* text-align: center; */
   align-items: center;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   cursor: pointer;
@@ -253,6 +257,8 @@
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 8px;
+  position: relative;
+
   transition: color 0.3s ease-in-out;
 }
 
@@ -264,6 +270,9 @@
   font-size: 14px;
   color: #555; /* Adjust the text color as needed */
   text-align: center;
+  position: relative;
+  margin-top: -15px;
+  z-index: 2;
   transition: opacity 0.3s ease-in-out;
 }
 .no-permission-popup.loaded span {

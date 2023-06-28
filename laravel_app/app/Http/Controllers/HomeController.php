@@ -80,17 +80,24 @@ class HomeController extends Controller
     public function api_update_role(Request $request, string $id)
     {
         $user = User::findOrFail($id);
+        // Log::info('This is an informational log message.');
+        
+        if (!auth()->user()->role === 'admin') {
+        // if (true) {
+            // $validatedData = $request->validate([
+            //     'role' => 'nullable|in:user,admin'
+            // ]);
+            // \Log::info($user->role);
+            if ($user->role == 'admin') {
+                $user->role = 'user';
+            } else {
+                $user->role = 'admin';
+            }
+            // \Log::info($user->role);
+            $user->save();
 
-        // if (!auth()->user()->role === 'admin') {
-        if (true) {
-            $validatedData = $request->validate([
-                'role' => 'nullable|in:user,admin'
-            ]);
-    
-            $user->role = $validatedData['role'] ?? 'user'; // Assign 'user' role if no role is provided
-            $user->role = $user->role === 'admin' ? 'user' : 'admin';
-            $user->save(); 
         } 
+        // response()->json(['message' => 'new role']);
     }
     public function register(Request $request)
     {
@@ -146,8 +153,30 @@ class HomeController extends Controller
     public function delete_logs()
     {
         $filePath = storage_path('logs.txt');
+        $logs = file($filePath);
+        $deletedCount = count($logs);
+        
         file_put_contents($filePath, '');
-        return response()->json(['message' => 'Izdzēsti sistēmas ieraksti']);
+        
+        return response()->json(['message' => 'Izdzēsti sistēmas ieraksti', 'skaits' => $deletedCount]);
     }
+
+    public function logs_half()
+    {
+        $filePath = storage_path('logs.txt');
+        $logs = file($filePath);
+        $deletedCount = 0;
+        
+        if (count($logs) > 50) {
+            $newestLogs = array_slice($logs, -50);
+            $deletedCount = count($logs) - 50;
+            
+            file_put_contents($filePath, '');
+            file_put_contents($filePath, implode($newestLogs));
+        }
+        
+        return response()->json(['skaits' => $deletedCount]);
+    }
+
 
 }

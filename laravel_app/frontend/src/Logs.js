@@ -7,8 +7,7 @@ import './Logs.css';
 const Logs = ( {token} ) => {
   const [logsData, setLogsData] = useState([]);
   
-
-  useEffect(() => {
+  const get_logs = () => {
     if (token) {
       axios.get(`http://localhost:2000/api/logs`, {
         headers: {
@@ -23,6 +22,10 @@ const Logs = ( {token} ) => {
         setLogsData(logs);
       });
     }
+  }
+
+  useEffect(() => {
+    get_logs();
   }, [token]);
 
   const del_logs = () => {
@@ -33,14 +36,33 @@ const Logs = ( {token} ) => {
             Authorization: `Bearer ${token}`,
           },
         })
-        .then(() => {
-          message.success('All logs deleted successfully.');
+        .then((response) => {
+          message.success('Izdzesti ' + response.data.skaits + ' ieraksti.');
+          get_logs();
         })
         .catch((error) => {
-          message.error('Failed to delete logs. Please try again later.');
+          message.error('Neizdevās izdzēst ierakstus.');
         });
     }
   };
+
+  const cleanup_logs = () => {
+    if (token) {
+      axios
+        .delete('http://localhost:2000/api/logs_half', {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        })
+        .then((response) => {
+          message.success('Izdzesti ' + response.data.skaits + ' ieraksti.');
+          get_logs();
+        })
+        .catch((error) => {
+          message.error('Neizdevās  izdzēšana.');
+        });
+    }
+  }
 
   const columns = [
     {
@@ -66,18 +88,22 @@ const Logs = ( {token} ) => {
   ];
 
   return (
-    <div>
-      <h1 className="logs-heading">Ieraksti
+    <div className='logs-container'>
+      <h1 className="logs-heading">
+        <span className='logs-heading-title'>Ieraksti</span>
+        <div>
+        <Button type="danger" className="delete-button" onClick={cleanup_logs}>Atstāt 50 jaunākos ierakstus</Button>
         <Popconfirm
-            title="Are you sure you want to delete all logs?"
+            title="Vai tiešām vēlies atbrīvoties no visiem ierakstiem?"
             onConfirm={del_logs}
-            okText="Yes"
-            cancelText="No"
+            okText="Jā"
+            cancelText="Nē"
             className="delete-confirm"
           >
-        <Button type="danger" className="delete-button">Izdzest visus ierakstus</Button>
+          <Button type="danger" className="delete-button">Izdzest visus ierakstus</Button>
         </Popconfirm>
-        </h1>
+        </div>
+      </h1>
       <Table dataSource={logsData} columns={columns} scroll={{y: 40000}} pagination={false} />
     </div>
   );

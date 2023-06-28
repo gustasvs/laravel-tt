@@ -197,6 +197,7 @@ const Home = ( { token } ) => {
         console.error('Error viewing image:', error);
       });
     } else {
+      setPopupImage(image);
         console.error('Neautentificets lietotajs');
     }
   };
