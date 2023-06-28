@@ -706,3 +706,4 @@
 {"timestamp":"2023-06-28T09:25:54.851543Z","error":"Image with id16 viewed!","user":"admin"}
 {"timestamp":"2023-06-28T09:25:56.671212Z","error":"Image with id16 viewed!","user":"admin"}
 {"timestamp":"2023-06-28T09:25:57.968612Z","error":"Image with id5 viewed!","user":"admin"}
+{"timestamp":"2023-06-28T09:38:58.191552Z","error":"Bilde ar id 5 viewed!","user":"admin"}
