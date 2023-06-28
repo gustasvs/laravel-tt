@@ -175,7 +175,7 @@ const Home = ( { token } ) => {
   const handleView = (image, imageId) => {
     const x = image.id;
     console.log(image.id, imageId, x);
-    if (token) {
+    if (token) { //  && image.author_name !== auth_user.name
       axios.post(`http://localhost:2000/api/images/${x}/view`, {}, {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -189,7 +189,7 @@ const Home = ( { token } ) => {
           return image2;
         });
         setGalleryImages(updatedGalleryImages);
-        save_log('Image with id' + imageId + ' viewed!', token);
+        save_log('Bilde ar id ' + imageId + ' viewed!', token);
         fetchUserImages();
         setPopupImage(image);
       })
@@ -337,6 +337,7 @@ const Home = ( { token } ) => {
                       <Space>
                         <Button icon={<DeleteOutlined />} onClick={() => handleDelete(image.id)} type="text" danger />
                         <Button icon={<LikeOutlined />} type="text"> {image.likes}</Button>
+                        <Button className='skatijumi' icon={<EyeOutlined />} type="text"> {image.views} </Button>
                       </Space>
                     ]}
                   >
@@ -465,7 +466,7 @@ const Home = ( { token } ) => {
         )}
       </div>
       {popupImage && (
-        <ImagePopup image={popupImage} onClose={handleClosePopup} onSave={handleSavePopup} token={token}/>
+        <ImagePopup image={popupImage} onClose={handleClosePopup} onSave={handleSavePopup} token={token} auth_user={auth_user}/>
       )}
     </div>
   );

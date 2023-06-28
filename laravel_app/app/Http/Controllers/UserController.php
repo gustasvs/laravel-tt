@@ -133,7 +133,8 @@ class UserController extends Controller
     public function change_name(Request $request, string $id)
     {
         $user = User::findOrFail($id);
-        $user->name = $request->name;
+        if ($request->name)
+            $user->name = $request->name;
         $user->save();
 
         return response()->json('nomainits');

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef} from 'react';
 import { Card, Col, Row, Avatar, Button, Input, Upload, message, Spin} from 'antd';
 import { useParams, useNavigate} from 'react-router-dom';
 import axios from 'axios';
@@ -59,44 +59,47 @@ const Profile = ( { token } ) => {
           console.error('Error fetching user data:', error);
         });
     }
-  }, [token, id]);
+  }, [token, id]);  // console.log("sending");
 
-  const debounce = (func, delay) => {
-    let timerId;
+  const [messageToSend, setMessageToSend] = useState('');
+  const [hasChange, setHasChange] = useState(false);
+  const [loop, setLoop] = useState(1);
 
-    return (...args) => {
-      clearTimeout(timerId);
-
-      timerId = setTimeout(() => {
-        func(...args);
-      }, delay);
-    };
+  const handleNameChange = () => {
+    if (hasChange) {
+      setHasChange(false);
+      const newName = messageToSend;
+      const formData = new FormData();
+      formData.append('name', newName);
+    
+      axios
+        .post(`http://localhost:2000/api/users/${id}/change_name`, formData, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        })
+        .then((response) => {
+          save_log('Lietotāja ' + newName + ' vārds pamainīts', token);
+        });
+    }
   };
 
-  const debounceDelay = 1000;
-
-  const handleNameChange = (event) => {
-    const newName = event.target.value;
-    const formData = new FormData();
-    formData.append('name', newName);
-    setUser((prevUser) => ({ ...prevUser, name: newName }));
-
-    axios
-      .post(`http://localhost:2000/api/users/${id}/change_name`, formData, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
-      .then((response) => {
-        save_log('Lietotāja ' + newName + ' vārds pamainīts', token);
-      });
-  };
-
-  const debouncedHandleNameChange = debounce(handleNameChange, debounceDelay);
+  const startLoop = () => {
+    setTimeout(() => {
+      handleNameChange();
+      // console.log(hasChange);
+      setLoop(loop + 1);
+    }, 1000);
+  }
+  useEffect(() => {
+    startLoop();
+  }, [loop]);
 
   const handleChange = (event) => {
+    setMessageToSend(event.target.value);
+    setHasChange(true);
+    // console.log(hasChange);
     setUser((prevUser) => ({ ...prevUser, name: event.target.value }));
-    debouncedHandleNameChange(event);
   };
   
 

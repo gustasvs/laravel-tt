@@ -213,8 +213,8 @@ class ImageController extends Controller
 
         $user = auth()->user();
         $image = Image::findOrFail($id);
-
-        $image->increment('views');
+        if ($image->user->id != $user->id)
+            $image->increment('views');
         return response()->json($image->views);
     }
     public function api_dislike(string $id) {

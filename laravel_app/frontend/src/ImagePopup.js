@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import { Modal, Input, Button } from 'antd';
 import axios from 'axios';
 import save_log from './logService';
+import './App.css';
 
-const ImagePopup = ({ image, onClose, onSave, token }) => {
+const ImagePopup = ({ image, onClose, onSave, token, auth_user}) => {
   const [description, setDescription] = useState(image.apraksts);
 
   const handleSave = () => {
     const imgDesc = image.apraksts;
+
     axios.put(`http://localhost:2000/api/images/${image.id}/update_desc`, { description }, {
       headers: {
         Authorization: `Bearer ${token}`,
@@ -29,19 +31,35 @@ const ImagePopup = ({ image, onClose, onSave, token }) => {
   const handleDescriptionChange = (e) => {
     setDescription(e.target.value);
   };
-
+  const [contentLoaded, setContentLoaded] = useState(false);
+  const handlePopupClick = () => {
+    setContentLoaded(true);
+  };
   return (
-    <Modal visible={true} centered footer={null} onCancel={onClose}>
+    <Modal open={true} centered footer={null} onCancel={onClose}>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <img alt={image.apraksts} src={image.url} style={{ maxWidth: '100%', maxHeight: '80vh' }} />
-        <div style={{ marginTop: '16px' }}>
-          <Input.TextArea value={description} onChange={handleDescriptionChange} rows={4} />
+        {(token && auth_user && (auth_user.role === 'admin' || auth_user.name === image.author_name)) ? (
+        <>
+        <div className="my-container">
+          <Input.TextArea
+            value={description}
+            onChange={handleDescriptionChange}
+            rows={4}
+            className="my-text-area"
+          />
+          <div className="my-button-container">
+            <Button type="primary" onClick={handleSave} className="my-button">
+              Saglabāt
+            </Button>
+          </div>
         </div>
-        <div style={{ marginTop: '16px' }}>
-          <Button type="primary" onClick={handleSave}>
-            Saglabāt
-          </Button>
+        </>) : (
+        <div className={`no-permission-popup ${contentLoaded ? 'loaded' : ''}`} onClick={handlePopupClick}>
+          <span>Bildes apraksts</span>
+          <div className={`content ${contentLoaded ? 'loaded' : ''}`}>{image.apraksts}</div>
         </div>
+        )}
       </div>
     </Modal>
   );

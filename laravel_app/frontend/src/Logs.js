@@ -19,7 +19,7 @@ const Logs = ( {token} ) => {
         const logs = response.data.map((log, index) => ({
           ...log,
           key: index + 1,
-        }));
+        })).reverse();
         setLogsData(logs);
       });
     }
