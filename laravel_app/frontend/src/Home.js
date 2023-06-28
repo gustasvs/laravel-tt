@@ -302,6 +302,20 @@ const Home = ( { token } ) => {
     });
   };
 
+  const getLastOnline = ($date) => {
+    const lastOnline = new Date($date);
+    const currentTime = new Date();
+    const timeDiff = Math.floor((currentTime - lastOnline) / (1000 * 60)); // Calculate the time difference in minutes
+    return timeDiff - 180;
+  }
+
+  const getMinutem = (minutes) => {
+    return minutes === 1 ? 'minūtes' : 'minūtēm';
+  };
+
+  const onlineUsers = users.filter(user => user.last_online !== null && getLastOnline(user.last_online) < 60);
+  const offlineUsers = users.filter(user => user.last_online === null || getLastOnline(user.last_online) >= 60);
+
   if (loading) return <Spin size="large" className='loading'/>;
 
   return (
@@ -450,11 +464,30 @@ const Home = ( { token } ) => {
         </div>
         {(token &&
         <div style={{ maxWidth: '300px' }}>
-          <h1>Lietotāju saraksts</h1>
+          <h2 className='lietot'>Aktīvie lietotāji</h2>
           <div style={{ border: '1px solid #d9d9d9', borderRadius: '4px', padding: '8px' }}>
-            {users.map((user) => (
+            {onlineUsers.map((user) => (
               <Card key={user.id} style={{ marginBottom: '16px' }}>
-                {/* <Card.Meta avatar={<Avatar src={'http://localhost:2000/storage/images/' + user.profile_picture_path} />} title={user.name} /> */}
+                {user.profile_picture_path !== 'none'  ? (
+                  <Card.Meta 
+                  avatar={<Avatar src={'http://localhost:2000/storage/images/' + user.profile_picture_path} />} 
+                  title={`${user.name}`}
+                  description={`pirms ${getLastOnline(user.last_online)} ${getMinutem(getLastOnline(user.last_online))}`} 
+                  />
+                ) : (
+                  <Card.Meta avatar={<Avatar/>} 
+                  title={`${user.name}`}
+                  description={`pirms ${getLastOnline(user.last_online)} ${getMinutem(getLastOnline(user.last_online))}`} />
+                )}
+                
+              </Card>
+              
+            ))}
+          </div>
+          <h2 className='lietot'>Visi lietotāji</h2>
+          <div style={{ border: '1px solid #d9d9d9', borderRadius: '4px', padding: '8px' }}>
+            {offlineUsers.map((user) => (
+              <Card key={user.id} style={{ marginBottom: '16px' }}>
                 {user.profile_picture_path !== 'none'  ? (
                   <Card.Meta avatar={<Avatar src={'http://localhost:2000/storage/images/' + user.profile_picture_path} />} title={user.name} />
                 ) : (

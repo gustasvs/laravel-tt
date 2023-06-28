@@ -59,3 +59,17 @@
     transform: translateY(0);
   }
 }
+
+.formatted-timestamp {
+  font-weight: bold;
+  color: #333;
+  background-color: #f5f5f5;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+
+
+.custom-cell {
+  padding: 10px;
+}

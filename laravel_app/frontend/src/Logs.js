@@ -69,21 +69,36 @@ const Logs = ( {token} ) => {
       title: 'ID',
       dataIndex: 'key',
       key: 'key',
+      className: 'custom-cell',
     },
     {
-      title: 'Timestamp',
+      title: 'Laiks',
       dataIndex: 'timestamp',
       key: 'timestamp',
+      className: 'custom-cell',
+      render: (timestamp) => {
+        const date = new Date(timestamp);
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        const hours = String(date.getHours()).padStart(2, '0');
+        const minutes = String(date.getMinutes()).padStart(2, '0');
+        const seconds = String(date.getSeconds()).padStart(2, '0');
+        const formattedTimestamp = `${day}.${month}.${year} ${hours}:${minutes}:${seconds}`;
+        return <span className='formatted-timestamp'>{formattedTimestamp}</span>;
+      },
     },
     {
-      title: 'Kas notika',
+      title: 'Ieraksts',
       dataIndex: 'error',
       key: 'error',
+      className: 'custom-cell',
     },
     {
       title: 'Lietotajs',
       dataIndex: 'user',
       key: 'user',
+      className: 'custom-cell',
     },
   ];
 

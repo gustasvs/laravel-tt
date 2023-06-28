@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
-
+use Illuminate\Support\Facades\Date;
 
 class UserController extends Controller
 {
@@ -71,6 +71,9 @@ class UserController extends Controller
         if (Auth::attempt($credentials)) {
             $user = Auth::user();
             $token = $user->createToken('authToken')->plainTextToken;
+            
+            $user->last_online = Date::now();
+            $user->save();
 
             return response()->json(['token' => $token], 200);
         } else {
