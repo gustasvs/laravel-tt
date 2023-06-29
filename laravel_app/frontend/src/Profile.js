@@ -98,6 +98,7 @@ const Profile = ( { token } ) => {
   const handleChange = (event) => {
     setMessageToSend(event.target.value);
     setHasChange(true);
+    setAuthUser((prevAuth) => ({ ...prevAuth, name: event.target.value}));
     // console.log(hasChange);
     setUser((prevUser) => ({ ...prevUser, name: event.target.value }));
   };

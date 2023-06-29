@@ -763,3 +763,48 @@
 {"timestamp":"2023-06-28T14:12:25.695990Z","error":"Ienacis jauns lietotajs! Epasts: admin@example.com, vards: admin, loma: admin!","user":"admin"}
 {"timestamp":"2023-06-28T14:15:05.111319Z","error":"Lietotajs izgajis no sistemas!","user":"admin"}
 {"timestamp":"2023-06-28T14:16:23.468485Z","error":"Ienacis jauns lietotajs! Epasts: admin@example.com, vards: admin, loma: admin!","user":"admin"}
+{"timestamp":"2023-06-29T10:35:26.455537Z","error":"Ielikta jauna bilde!","user":"admin"}
+{"timestamp":"2023-06-29T10:35:30.983074Z","error":"Bilde ar id 24 viewed!","user":"admin"}
+{"timestamp":"2023-06-29T10:35:35.740662Z","error":"Nomain\u012bts bildes ar id 24 apraksts","user":"admin"}
+{"timestamp":"2023-06-29T10:35:40.063968Z","error":"Bilde ar id 24 izdzesta!","user":"admin"}
+{"timestamp":"2023-06-29T10:36:03.815622Z","error":"Lietotajs izgajis no sistemas!","user":"admin"}
+{"timestamp":"2023-06-29T10:36:11.024462Z","error":"Ienacis jauns lietotajs! Epasts: tester@example.com, vards: tester, loma: user!","user":"tester"}
+{"timestamp":"2023-06-29T10:36:25.557692Z","error":"Lietotajs izgajis no sistemas!","user":"tester"}
+{"timestamp":"2023-06-29T10:36:31.235673Z","error":"Ienacis jauns lietotajs! Epasts: admin@example.com, vards: admin, loma: admin!","user":"admin"}
+{"timestamp":"2023-06-29T10:36:35.285147Z","error":"Lietotajs izgajis no sistemas!","user":"admin"}
+{"timestamp":"2023-06-29T10:37:43.985816Z","error":"Registrejies jauns lietotajs!","user":"maija"}
+{"timestamp":"2023-06-29T10:37:44.698060Z","error":"Re\u0123istr\u0113jies jauns lietot\u0101js!","user":"maija"}
+{"timestamp":"2023-06-29T10:37:59.139746Z","error":"Nolaikota bilde ar id 22","user":"maija"}
+{"timestamp":"2023-06-29T10:38:02.378667Z","error":"Nolaikota bilde ar id 1","user":"maija"}
+{"timestamp":"2023-06-29T10:38:06.103299Z","error":"Bilde ar id undefined viewed!","user":"maija"}
+{"timestamp":"2023-06-29T10:38:12.190890Z","error":"Bilde ar id undefined viewed!","user":"maija"}
+{"timestamp":"2023-06-29T10:38:41.289548Z","error":"Lietot\u0101ja maija  v\u0101rds pamain\u012bts","user":"maija"}
+{"timestamp":"2023-06-29T10:38:51.765468Z","error":"Lietot\u0101ja maijaa v\u0101rds pamain\u012bts","user":"maijaa"}
+{"timestamp":"2023-06-29T10:42:18.763863Z","error":"Lietot\u0101ja maijaa  v\u0101rds pamain\u012bts","user":"maijaa"}
+{"timestamp":"2023-06-29T10:42:21.821301Z","error":"Lietot\u0101ja maija v\u0101rds pamain\u012bts","user":"maija"}
+{"timestamp":"2023-06-29T10:42:24.623681Z","error":"Lietot\u0101ja maija liepina v\u0101rds pamain\u012bts","user":"maija liepina"}
+{"timestamp":"2023-06-29T10:42:38.789432Z","error":"Ielikta jauna bilde!","user":"maija liepina"}
+{"timestamp":"2023-06-29T10:42:42.689161Z","error":"Lietotajs izgajis no sistemas!","user":"maija liepina"}
+{"timestamp":"2023-06-29T10:42:47.080292Z","error":"Ienacis jauns lietotajs! Epasts: admin@example.com, vards: admin, loma: admin!","user":"admin"}
+{"timestamp":"2023-06-29T10:42:54.673241Z","error":"Nolaikota bilde ar id 25","user":"admin"}
+{"timestamp":"2023-06-29T10:42:56.562686Z","error":"Bilde ar id undefined viewed!","user":"admin"}
+{"timestamp":"2023-06-29T10:43:02.703175Z","error":"Nomain\u012bts bildes ar id 25 apraksts","user":"admin"}
+{"timestamp":"2023-06-29T10:43:07.377733Z","error":"Bilde ar id 25 izdzesta!","user":"admin"}
+{"timestamp":"2023-06-29T10:43:16.953769Z","error":"Bilde ar id 23 izdzesta!","user":"admin"}
+{"timestamp":"2023-06-29T10:47:58.444501Z","error":"Bilde ar id 22 izdzesta!","user":"admin"}
+{"timestamp":"2023-06-29T10:48:06.926880Z","error":"Lietotajs izgajis no sistemas!","user":"admin"}
+{"timestamp":"2023-06-29T10:48:28.858752Z","error":"Ienacis jauns lietotajs! Epasts: tester@example.com, vards: tester, loma: user!","user":"tester"}
+{"timestamp":"2023-06-29T10:48:31.350795Z","error":"Lietotajs izgajis no sistemas!","user":"tester"}
+{"timestamp":"2023-06-29T10:48:40.466079Z","error":"Ienacis jauns lietotajs! Epasts: maija@gmail.com, vards: maija liepina, loma: user!","user":"maija liepina"}
+{"timestamp":"2023-06-29T10:48:50.926359Z","error":"Ielikta jauna bilde!","user":"maija liepina"}
+{"timestamp":"2023-06-29T10:48:59.790254Z","error":"Ielikta jauna bilde!","user":"maija liepina"}
+{"timestamp":"2023-06-29T10:49:57.789630Z","error":"Ielikta jauna bilde!","user":"maija liepina"}
+{"timestamp":"2023-06-29T10:50:00.341290Z","error":"Bilde ar id 28 viewed!","user":"maija liepina"}
+{"timestamp":"2023-06-29T10:50:16.119629Z","error":"Nomain\u012bts bildes ar id 28 apraksts","user":"maija liepina"}
+{"timestamp":"2023-06-29T10:50:30.420076Z","error":"Lietotajs izgajis no sistemas!","user":"maija liepina"}
+{"timestamp":"2023-06-29T11:26:53.234537Z","error":"Ienacis jauns lietotajs! Epasts: admin@example.com, vards: admin, loma: admin!","user":"admin"}
+{"timestamp":"2023-06-29T11:26:59.053433Z","error":"Dislaikota bilde ar id 10","user":"admin"}
+{"timestamp":"2023-06-29T11:26:59.917638Z","error":"Nolaikota bilde ar id 10","user":"admin"}
+{"timestamp":"2023-06-29T11:27:00.413268Z","error":"Nolaikota bilde ar id 10","user":"admin"}
+{"timestamp":"2023-06-29T11:27:01.719546Z","error":"Dislaikota bilde ar id 10","user":"admin"}
+{"timestamp":"2023-06-29T11:27:02.279476Z","error":"Nolaikota bilde ar id 10","user":"admin"}

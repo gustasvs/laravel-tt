@@ -164,6 +164,18 @@ const Home = ( { token } ) => {
       save_log('Bilde ar id ' + imageId + ' izdzesta!', token); 
       // console.log('Image deleted successfully:', response.data);
       fetchUserImages();
+      axios.get(`http://localhost:2000/api/images`).then((response) => {
+ 
+      const imagesWithUrls = response.data.map((image) => ({
+          ...image,
+          url: `http://localhost:2000/storage/images/${image.filename}`, // Replace with the base URL of your file server
+          author_profile_picture_path: `${image.user.profile_picture_path}`,
+          author_name: `${image.user.name}`,
+          apraksts: image.apraksts,
+        }));
+        setGalleryImages(imagesWithUrls);
+      });
+
     })
     .catch((error) => {
       console.error('Error deleting image:', error);

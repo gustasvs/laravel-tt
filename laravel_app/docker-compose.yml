@@ -46,7 +46,7 @@ services:
       - 2000:80
     depends_on:
       - db
-    command: bash -c "sleep 10 && php artisan serve --host=0.0.0.0 --port=80"
+    # command: bash -c ""
 
 volumes:
   mysqldata:
